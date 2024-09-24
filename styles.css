@@ -26,7 +26,7 @@ body{
 
 header{
     background-color: var(--white);
-    grid-area: 1 / 3 / 3 / 13;
+    grid-area: 1 / 3 / 2 / 13;
 }
 
 .account-info{
@@ -102,9 +102,80 @@ img {
     border: none;
   }
 main {
+    display: grid;
+    grid-template: 0.1fr 1fr 1fr 1fr/ 4fr 1fr;
     background-color: var(--background);
-    grid-area: 3 / 3 / 11 / 13;
+    grid-area: 2 / 3 / 11 / 13;
+    gap: 10px;
+    padding: 20px 10px;
 }
+
+.projects-container{
+    position: relative;
+    grid-area: 2 / 1 / 4 / 2;
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr 1fr;
+    gap: 10px;
+}
+
+
+.project-item{
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: flex-start;
+}
+.card-content{
+    margin: 5%;
+}
+.card-content p {
+    margin-top: 2%;
+}
+
+.card-content-trending{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+.blue-bar {
+    background-color: var(--primary);
+    width: 10%;
+    height: 98%;
+    border-radius: 25px 0 0 25px;
+    padding: 2px;
+}
+
+.side-container {
+    grid-area: 2/3/4/2;
+    display: grid;
+    grid-template: 2fr 0.1fr 1fr / 1fr;
+    gap: 20px;
+}
+
+.card-container{
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.side-container div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.divider{
+    height: 2px;
+    align-self: center;
+    width: 80%;
+    background-color: var(--background);
+}
+
+.content-title {
+    margin-bottom: 15px; /* Adds space between title and content */
+    color: black; /* Optional: change color of the title */
+    font-weight: bold; 
+}
+
 aside {
     display: grid;
     grid-template: repeat(10, 1fr) / repeat(4, 1fr); 
@@ -138,7 +209,7 @@ aside img{
     gap: 10px;
 }
 
-.nav-item a {
+a {
     display: flex;
     align-items: center; 
     gap: 10px; 
